@@ -16,7 +16,7 @@ class LoadDiaData(Dataset):
         # features file
         file=open('IEMOCAP_features_BertText_4Class.pkl','rb')
         # load data
-        self.videoIDs, self.videoSpeakers, self.videoLabels, self.videoText, self.videoAudio, self.videoVisual, \
+        self.videoIDs, self.videoSpeakers, self.videoLabels, self.videoText, self.videoAudio, _, \
         self.videoSentence, self.trainVid, self.testVid = pickle.load(file, encoding='latin1')
         
         self.indexes = np.arange(len(self.videoIDs))
