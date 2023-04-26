@@ -5,13 +5,11 @@ import argparse
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--outfile', type=str, default="tmp.txt", help='output confusion matrix to a file')
-    parser.add_argument('--modal', type=str, default="multi", help='choose "text","audio","multi"')
     parser.add_argument('--fusion', type=str, default="ADD",
                         help='choose "AT_fusion" "Concat" "ADD" ')
     parser.add_argument('--loss_num', type=str, default='3', help='1loss or 3loss')
 
     args = parser.parse_args()
-    modal = args.modal  
     fusion = args.fusion  
     loss_num = args.loss_num 
     
